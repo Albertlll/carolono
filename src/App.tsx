@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState<number>(0)
   // const [bg, setBg] = useState()
   return (
-    <div className='h-[100vh] w-[100vw] bg-bg-color grid items-center justify-center grid-cols-[auto_650px_auto] grid-rows-3'>
+    <div className='h-full w-full bg-bg-color grid items-center justify-center grid-cols-[auto_33%_auto] grid-rows-3'>
         <motion.div className='h-full w-full col-start-2 row-start-2 relative'>
 
           <AnimatePresence initial={true}>
