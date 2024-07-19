@@ -7,21 +7,29 @@ import {
   AnimatePresence
 } from "framer-motion";
 
+import data from "./data.json"
 
 function App() {
-  const [count, setCount] = useState<number>(0)
-  // const [bg, setBg] = useState()
+
+  const [count, setCount] = useState(0);
+
   return (
+    <>
+
     <div className='h-full w-full bg-bg-color grid items-center justify-center grid-cols-[auto_33%_auto] grid-rows-3'>
-        <motion.div className='h-full w-full col-start-2 row-start-2 relative'>
+        <motion.div className='h-full w-full col-start-2 row-start-2 relative z-50'>
 
           <AnimatePresence initial={true}>
-              <Card setCount={setCount} key={count} count={count} word='Какашка'/>
+            
+              <Card setCount={setCount} key={count} count={count} cardInfo={data[count]}/>
+              
+            
           </AnimatePresence>
-
         </motion.div>
+    </div>    
 
-    </div>
+    </>
+   
   )
 }
 
